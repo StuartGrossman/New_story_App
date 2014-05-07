@@ -1,0 +1,17 @@
+<h1> Welcome to your Stori dashboard! </h1>
+    <table>
+	<% @stories.each do |story| %>
+      <tr>
+        <td><%= story.story_title %></td>
+        <td><%= story.story_address %></td>
+        <td><%= story.longitude %></td>
+        <td><%= story.latitude %></td>
+      </tr>
+
+      <tr>
+        <td><%= link_to 'Show', story %></td>
+        <td><%= link_to 'Edit', edit_story_path(story) %></td>
+        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+</table>
