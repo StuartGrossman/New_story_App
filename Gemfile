@@ -6,7 +6,7 @@ gem 'devise'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
-
+gem 'paperclip'
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -34,13 +34,15 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+group :production do
+  gem 'rails_12factor'
+end
 group :development, :test do
   gem 'pry'
   gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'rails-erd'
-  gem 'paperclip'
   gem 'aws-sdk'
 end
 

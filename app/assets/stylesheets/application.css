@@ -37,7 +37,7 @@ body {
 	width: 350px;
 	height: 200px;
 	margin-left: 250px;
-	color: white;
+	color: swhite;
 }
 .sign_up {
 	width: 500px;
@@ -73,8 +73,8 @@ body {
 #size_dash {
 	font-size: 40px;
 }
-.show_pages {
-	color: white;
+/*.show_pages {
+	color: white;*/
 }
 #new_story {
 	color: white;
