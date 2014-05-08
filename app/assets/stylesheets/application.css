@@ -10,4 +10,16 @@
  *
  *= require_self
  *= require_tree .
+ *= require_bootstrap.min
  */
+body {
+	background-image: url(http://3.bp.blogspot.com/_q016kExGrVs/TReSLlwH-6I/AAAAAAAAAic/1lmHd6s2QbU/s1600/routes.png);
+}
+.header2 {
+	font-family: monospace;
+	color: white;
+}
+.header1 {
+	color: white;
+}
+
