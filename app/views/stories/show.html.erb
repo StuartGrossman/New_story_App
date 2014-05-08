@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+<div class="show_pages"><center>
+<p><%= notice %></p>
 
 <p>
   <strong>Story title:</strong>
@@ -29,6 +30,6 @@
 <p>
 	<p><%= image_tag @story.image(:medium) %></p>
 </p>
-
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', stories_path %>
+</center></div>
+<%= link_to 'Edit', edit_story_path(@story), :class => "btn btn-success" %> |
+<%= link_to 'Back', stories_path, :class => "btn btn-success" %>

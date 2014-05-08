@@ -1,17 +1,36 @@
-<h1> Welcome to your Stori dashboard! </h1>
-    <table>
+<center><h1 id="dashboard"> Your Stori dashboard! </h1>
+    <table id="table_color">
 	<% @stories.each do |story| %>
       <tr>
-        <td><%= story.story_title %></td>
-        <td><%= story.story_address %></td>
-        <td><%= story.longitude %></td>
-        <td><%= story.latitude %></td>
+        <div id="size_dash">
+          <td> Title --  <%= story.story_title %></td>
+
+          <td> Address --  <%= story.story_address %></td>
+        </div>
       </tr>
 
       <tr>
-        <td><%= link_to 'Show', story %></td>
-        <td><%= link_to 'Edit', edit_story_path(story) %></td>
-        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', story, :class => "btn btn-info"%></td>
+        <td><%= link_to 'Edit', edit_story_path(story), :class => "btn btn-info" 
+        %></td>
+        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-info" %></td>
       </tr>
     <% end %>
-</table>
+</table></center>
+
+<div style='width: 800px;'>
+    <div id="map" style='width: 1680px; height: 500px;'></div>
+</div>
+
+  <script type="text/javascript">
+      handler = Gmaps.build('Google');
+
+      handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+
+        markers = handler.addMarkers(<%=raw @hash.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
+  </script>
+
+<%= link_to 'View All Stories', stories_path, :class => "btn btn-success" %>

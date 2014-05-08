@@ -9,7 +9,7 @@ class StoriesController < ApplicationController
       marker.lat story.latitude
       marker.lng story.longitude
       # marker.picture @picture
-      marker.infowindow "<a href='/stories/#{story.id}'>Click for Story!</a>"
+      marker.infowindow "<a href='/stories/#{story.id}'>#{story.story_title}</a>"
     end
   end
 

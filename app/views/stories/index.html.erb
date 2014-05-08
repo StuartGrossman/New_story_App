@@ -1,6 +1,6 @@
-<h1>Listing stories</h1>
+<div class="listing"><center><h1>Stories</h1></center>
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Story title</th>
@@ -27,31 +27,16 @@
     <% end %>
   </tbody>
 </table>
-
+</div> -->
   <div style='width: 800px;'>
-    <div id="map" style='width: 1000px; height: 600px;'></div>
+    <div id="map" style='width: 1680px; height: 600px;'></div>
   </div>
 
   <script type="text/javascript">
       handler = Gmaps.build('Google');
-      // handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-      //   markers = handler.addMarkers(<%=raw @hash.to_json %>);
-      //   handler.bounds.extendWith(markers);
-      //   handler.fitMapToBounds();
-      // });
+
       handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-        // markers = handler.addMarkers([
-        //   {
-        //     "lat": 37.7749295,
-        //     "lng": -122.4194155,
-        //     "picture": {
-        //       "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-        //       "width":  36,
-        //       "height": 36
-        //     },
-        //     "infowindow": "hello!"
-        //   }
-        // ]);
+
         markers = handler.addMarkers(<%=raw @hash.to_json %>);
         handler.bounds.extendWith(markers);
         handler.fitMapToBounds();
@@ -60,4 +45,5 @@
 
 <br>
 
-<%= link_to 'New Story', new_story_path %>
+<%= link_to 'New Story', new_story_path, :class => "btn btn-success" %>
+<%= link_to 'My DashBoard', dashboard_index_path, :class => "btn btn-success" %>
