@@ -5,11 +5,11 @@ class StoriesController < ApplicationController
   # GET /stories.json
   def index
     @stories = Story.all
-     @hash = Gmaps4rails.build_markers(@stories) do |user, marker|
-      marker.lat user.latitude
-      marker.lng user.longitude
+    @hash = Gmaps4rails.build_markers(@stories) do |story, marker|
+      marker.lat story.latitude
+      marker.lng story.longitude
       # marker.picture @picture
-      marker.infowindow '<a href="/stories/3">Click for Story!</a>'
+      marker.infowindow "<a href='/stories/#{story.id}'>Click for Story!</a>"
     end
   end
 
@@ -72,6 +72,6 @@ class StoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def story_params
-      params.require(:story).permit(:story_title, :story_address, :longitude, :latitude)
+      params.require(:story).permit(:story_title, :image, :story_address, :longitude, :latitude, :story_text)
     end
 end

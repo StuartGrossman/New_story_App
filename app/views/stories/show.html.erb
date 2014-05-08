@@ -11,6 +11,12 @@
 </p>
 
 <p>
+  <strong>Story text</strong>
+  <%= @story.story_text %>
+</p>
+
+
+<p>
   <strong>Longitude:</strong>
   <%= @story.longitude %>
 </p>
@@ -18,6 +24,10 @@
 <p>
   <strong>Latitude:</strong>
   <%= @story.latitude %>
+</p>
+
+<p>
+	<p><%= image_tag @story.image(:medium) %></p>
 </p>
 
 <%= link_to 'Edit', edit_story_path(@story) %> |

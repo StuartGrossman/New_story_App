@@ -40,6 +40,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'rails-erd'
+  gem 'paperclip'
+  gem 'aws-sdk'
 end
 
 # Use ActiveModel has_secure_password
