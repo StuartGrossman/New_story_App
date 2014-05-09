@@ -8,7 +8,7 @@ gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'paperclip'
 gem 'pg'
-
+gem 'aws-sdk'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
@@ -43,7 +43,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'rails-erd'
-  gem 'aws-sdk'
 end
 
 # Use ActiveModel has_secure_password
