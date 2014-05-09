@@ -6,7 +6,7 @@ class Story < ActiveRecord::Base
   has_attached_file :image, styles: {
     thumb: '100x100>',
     square: '200x200#',
-    medium: '300x300>'
+    medium: '800x600>'
   },
   :path => ":rails_root/tmp"
 

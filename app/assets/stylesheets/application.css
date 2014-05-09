@@ -36,13 +36,13 @@ body {
 .sign_in {
 	width: 350px;
 	height: 200px;
-	margin-left: 250px;
-	color: swhite;
+	margin-left: 500px;
+	color: white;
 }
 .sign_up {
 	width: 500px;
 	height: 200px;
-	margin-left: 250px;
+	margin-left: 550px;
 	color: white;	
 }
 .sign_in_head {
@@ -56,7 +56,10 @@ body {
 	margin-left: 20px;
 	color: white;
 }
-
+.show_pages {
+	color: white;
+	background-color: rgba(255, 0, 0, 0.26);
+}
 #third {
 	margin-left: 20px;
 	color: white;
@@ -72,8 +75,9 @@ body {
 }
 #size_dash {
 	font-size: 40px;
-}
+	overflow: auto;
 
-#new_story {
+}
+#storyHead {
 	color: white;
 }

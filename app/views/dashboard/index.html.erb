@@ -1,4 +1,4 @@
-<center><h1 id="dashboard"> Your Stori dashboard! </h1>
+<center><h1 id="dashboard"> Your Moments! </h1>
     <table id="table_color">
 	<% @stories.each do |story| %>
       <tr>
@@ -10,7 +10,7 @@
       </tr>
 
       <tr>
-        <td><%= link_to 'Show', story, :class => "btn btn-info"%></td>
+        <td><%= link_to 'Show', story_path(story.id), :class => "btn btn-info"%></td>
         <td><%= link_to 'Edit', edit_story_path(story), :class => "btn btn-info" 
         %></td>
         <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-info" %></td>
@@ -32,6 +32,6 @@
         handler.fitMapToBounds();
       });
   </script>
-
+<br><br>
 <%= link_to 'View All Stories', stories_path, :class => "btn btn-success" %>
 <%= link_to 'New Story', new_story_path, :class => "btn btn-success" %>
