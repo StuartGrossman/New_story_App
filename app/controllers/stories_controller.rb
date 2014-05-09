@@ -30,7 +30,7 @@ class StoriesController < ApplicationController
   # POST /stories
   # POST /stories.json
   def create
-    @story = current_user.stories.new(story_params)
+    @story = Story.new(story_params.merge(:user_id => current_user.id))
     if @story.save
        redirect_to @story, notice: 'Story was successfully created.' 
     else 
