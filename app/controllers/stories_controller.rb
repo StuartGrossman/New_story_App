@@ -29,6 +29,12 @@ class StoriesController < ApplicationController
   def edit
   end
 
+   def search
+    @search = SimpleSearch.new SimpleSearch.get_params(params)
+    if @search.valid?
+      @stories = @search.search_within Story.all, :story_address
+    end
+  end
   # POST /stories
   # POST /stories.json
   def create

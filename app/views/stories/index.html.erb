@@ -42,8 +42,10 @@
         handler.fitMapToBounds();
       });
   </script>
-
+</div>
 <br>
-
+<%= text_field :search_stories %>
+<%= submit class => "btn btn-success" %>
+<%= link_to "Search Stories", '#', :class => "btn btn-success" %>
 <%= link_to 'New Story', new_story_path, :class => "btn btn-success" %>
 <%= link_to 'My DashBoard', dashboard_index_path, :class => "btn btn-success" %>

@@ -1,8 +1,10 @@
 Stori::Application.routes.draw do
-  resources :stories
-
+  resources :stories do
+  get 'search', on: :collection
+  end
   devise_for :users
   resources :dashboard, :stories
+  
   root to: "home#index"
 #      Prefix Verb   URI Pattern                    Controller#Action
 #                  stories GET    /stories(.:format)             stories#index
